@@ -262,6 +262,10 @@
         right: 1%;
         z-index: 200;
 
+        @include repond-phone {
+          height: calc(100vh - 9rem);
+        }
+
         &--chat {
           max-height: 88.5vh;
           overflow-y: scroll;

@@ -361,6 +361,9 @@
     @include respond-tablet {
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
+    @include repond-phone {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
 
     &--icons {
       display: flex;

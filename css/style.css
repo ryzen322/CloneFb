@@ -366,6 +366,9 @@ ul {
       background-color: #18191a;
       padding-top: 0;
       z-index: 100; } }
+  @media (max-width: 31.25em) {
+    .aside {
+      grid-column: 1 / -1; } }
   .aside__navigation {
     display: flex;
     flex-direction: column;
@@ -482,6 +485,10 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; }
+    @media (max-width: 31.25em) {
+      .aside__copyright {
+        justify-content: flex-start;
+        padding: 1rem 1rem; } }
     .aside__copyright ul {
       display: flex;
       column-gap: 1rem;
@@ -680,6 +687,9 @@ ul {
         background-color: #242526;
         right: 1%;
         z-index: 200; }
+        @media (max-width: 31.25em) {
+          .navigation__userinfo .icons .notification-message {
+            height: calc(100vh - 9rem); } }
         .navigation__userinfo .icons .notification-message--chat {
           max-height: 88.5vh;
           overflow-y: scroll; }
@@ -1449,6 +1459,9 @@ ul {
     @media (max-width: 75em) {
       .post__icon {
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); } }
+    @media (max-width: 31.25em) {
+      .post__icon {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); } }
     .post__icon--icons {
       display: flex;
       align-items: center;

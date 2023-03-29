@@ -21,6 +21,10 @@
     z-index: 100;
   }
 
+  @include repond-phone {
+    grid-column: 1 / -1;
+  }
+
   &__navigation {
     display: flex;
     flex-direction: column;
@@ -172,11 +176,15 @@
   }
 
   &__copyright {
-    // background-color: green;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @include repond-phone {
+      justify-content: flex-start;
+      padding: 1rem 1rem;
+    }
 
     & ul {
       display: flex;
@@ -187,6 +195,7 @@
       & li a {
         font-size: 1.25rem;
         color: $font-color--1;
+
         font-weight: 500;
       }
     }
