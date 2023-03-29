@@ -687,9 +687,12 @@ ul {
         background-color: #242526;
         right: 1%;
         z-index: 200; }
+        @media (max-width: 43.75em) {
+          .navigation__userinfo .icons .notification-message {
+            height: calc(100vh - 8rem); } }
         @media (max-width: 31.25em) {
           .navigation__userinfo .icons .notification-message {
-            height: calc(100vh - 9rem); } }
+            height: calc(100vh - 7.9rem); } }
         .navigation__userinfo .icons .notification-message--chat {
           max-height: 88.5vh;
           overflow-y: scroll; }
