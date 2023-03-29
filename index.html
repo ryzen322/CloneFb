@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Facebook</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navigation">
+        <div class="navigation__search">
+          <div class="navigation__search--logo">
+            <img src="./img/logo.png" alt="facebook logo" />
+          </div>
+          <div class="navigation__search--input">
+            <span class="material-symbols-rounded"> search </span>
+            <input type="text" placeholder="Search Facebook" />
+          </div>
+        </div>
+        <div class="navigation__navbar">
+          <div class="navigation__navbar--icons">
+            <div class="icons-ui">
+              <span class="material-symbols-rounded"> home </span>
+              <div class="icons-ui__active"></div>
+            </div>
+            <div class="icons-ui">
+              <span class="material-symbols-rounded"> radio </span>
+            </div>
+            <div class="icons-ui">
+              <span class="material-symbols-rounded">
+                local_convenience_store
+              </span>
+            </div>
+            <div class="icons-ui">
+              <span class="material-symbols-rounded"> diversity_4 </span>
+            </div>
+            <div class="icons-ui">
+              <span class="material-symbols-rounded"> videogame_asset </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="navigation__userinfo">
+          <div class="icons addicons">
+            <div class="icons__rounded">
+              <img
+                src="./svg-icons/plus-svgrepo-com.svg"
+                alt=""
+                class="img-icons"
+              />
+            </div>
+
+            <div class="create-post" id="display-none">
+              <div class="create-post--text">
+                <h1>Create</h1>
+              </div>
+
+              <div class="create-post--icons"></div>
+
+              <div class="create-post--linear linear"></div>
+
+              <div class="create-post--icons"></div>
+            </div>
+          </div>
+          <div class="icons addmaill">
+            <div class="icons__rounded">
+              <img
+                src="./svg-icons/messenger-fill-svgrepo-com.svg"
+                alt=""
+                class="img-icons"
+              />
+            </div>
+
+            <!-- message -->
+
+            <div class="notification-message" id="display-none">
+              <div class="notification-message--chat">
+                <div class="chat">
+                  <div class="chat-headers">
+                    <h4>Chats</h4>
+
+                    <div class="chat-headers--icons">
+                      <div class="icons-img">
+                        <i
+                          style="
+                            background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/_UEr_9TrCEJ.png?_nc_eui2=AeELdFHX_rAuYDXe2iMLxflJaJyEg4Qa6iNonISDhBrqI6Eg2NkRZThlHlQv32xZIp84lYKM9C0La_jCU7MfLEF9);
+                            background-position: -42px -105px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                          class="bg-secondary-icons"
+                        ></i>
+                      </div>
+                      <div class="icons-img">
+                        <i
+                          style="
+                            background-image: url(./img/background-message-settings.png);
+                            background-position: 0px -337px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                          class="bg-secondary-icons"
+                        ></i>
+                      </div>
+                      <div class="icons-img">
+                        <i
+                          style="
+                            background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/7cawWEp81bH.png?_nc_eui2=AeHmECKzolvj-KmrH0W7W8vXLAHa-1x9uvgsAdr7XH26-E6dSWHqFqonJdcrUnsOJ-16VTCUm4i2wdlum3B_Un2m);
+                            background-position: 0px -213px;
+                            background-size: auto;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                          class="bg-secondary-icons"
+                        ></i>
+                      </div>
+                      <div class="icons-img">
+                        <i
+                          style="
+                            background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/7cawWEp81bH.png?_nc_eui2=AeHmECKzolvj-KmrH0W7W8vXLAHa-1x9uvgsAdr7XH26-E6dSWHqFqonJdcrUnsOJ-16VTCUm4i2wdlum3B_Un2m);
+                            background-position: 0px -1331px;
+                            background-size: auto;
+                            width: 16px;
+                            height: 16px;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                          "
+                          class="bg-secondary-icons"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- search icons -->
+                  <div class="chat-search">
+                    <span class="material-symbols-rounded"> search </span>
+                    <input type="text" placeholder="Search Messenger" />
+                  </div>
+                  <!-- end of search icons -->
+
+                  <div class="chat-communities">
+                    <div class="chat-communities--inbox"><h4>Inbox</h4></div>
+                    <div class="chat-communities--communities">
+                      <h4>Communities</h4>
+                    </div>
+                  </div>
+
+                  <div class="chat-request">
+                    <div class="chat-request--img">
+                      <i></i>
+                    </div>
+
+                    <div class="chat-request--text">
+                      <h4>New message requests</h4>
+                      <p>From Arteezy and 12 more</p>
+                    </div>
+
+                    <div class="chat-request--next">
+                      <i
+                        style="
+                          background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/ksoiDx1SUW6.png?_nc_eui2=AeHuVEPaTQJWgeMlfCigo9vEPw97ouMoUdU_D3ui4yhR1SirOazdJiLxPhFV8zCFRoAk9S9-gGId593JovY_KxKI);
+                          background-position: -144px -126px;
+                          background-size: auto;
+                          width: 16px;
+                          height: 16px;
+                          background-repeat: no-repeat;
+                          display: inline-block;
+                        "
+                        class="bg-icons"
+                      ></i>
+                    </div>
+                  </div>
+
+                  <div class="chat-messages">
+                    <div class="chat-messages--profile">
+                      <img src="./img/momomyday.jpg" alt="" />
+                    </div>
+                    <div class="chat-messages--inbox">
+                      <h1 class="header-unread">Redlie meme production:Po..</h1>
+                      <p class="recieved">
+                        Molten GG7X: G ngay maya... <span>.17h</span>
+                      </p>
+                    </div>
+                    <div class="chat-messages--option">
+                      <span class="material-symbols-rounded bg-icons">
+                        more_horiz
+                      </span>
+                    </div>
+                    <div class="chat-messages--unit">
+                      <div class="type-unread"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="notification-message--footer">
+                <h1>See all in Messenger</h1>
+              </div>
+            </div>
+
+            <!-- end of message -->
+          </div>
+          <div class="icons addnotif">
+            <div class="icons__rounded">
+              <img
+                src="./svg-icons/bell-2-svgrepo-com.svg"
+                alt=""
+                class="img-icons"
+              />
+            </div>
+
+            <div class="notification-settings" id="display-none">
+              <div class="notification-header">
+                <h4>Notifications</h4>
+
+                <div class="notification-header--rounded">
+                  <span class="material-symbols-rounded"> more_horiz </span>
+                </div>
+              </div>
+
+              <!-- unread -->
+              <div class="notification-unread">
+                <div class="notification-unread--all">
+                  <p>All</p>
+                </div>
+                <div class="notification-unread--unread">
+                  <p>Unread</p>
+                </div>
+              </div>
+              <!-- end of unread -->
+
+              <!-- new notification -->
+
+              <div class="notification-new">
+                <h4>New</h4>
+                <div class="notification-new--rounded">
+                  <p>See all</p>
+                </div>
+              </div>
+              <!-- end of new notification -->
+
+              <!-- content -->
+
+              <div class="notification-content">
+                <div class="notification-content--rounded">
+                  <img src="./img/profilepic.jpg" alt="" />
+                  <div class="notification-content--rounded-sub">
+                    <i
+                      style="
+                        height: 28px;
+                        width: 28px;
+                        background-image: url(./img/background-reactions.png);
+                        background-position: 0px -1015px;
+                        background-size: auto;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                      "
+                    ></i>
+                  </div>
+                </div>
+
+                <div class="notification-content--text">
+                  <h4>Phaul Mabazza Bautista</h4>
+                  <p>
+                    reacted to a video you are tagged in: "Basic samin Mart
+                    Edison Rj Leomar -:D"
+                  </p>
+
+                  <span>4 days ago</span>
+                </div>
+                <div class="notification-content--active"></div>
+
+                <div class="notification-content--settings">
+                  <span class="material-symbols-rounded"> more_horiz </span>
+                </div>
+              </div>
+
+              <!-- end content -->
+
+              <!-- Earlier -->
+              <div class="notification-early">
+                <h4>Earlier</h4>
+              </div>
+              <!-- end of Earlier -->
+            </div>
+          </div>
+
+          <div class="icons adduser">
+            <div class="icons__rounded">
+              <img src="./img/profilepic.jpg" alt="" />
+            </div>
+
+            <div class="user-settings" id="display-none">
+              <div class="user-settings__account">
+                <div class="user-settings__account--profile">
+                  <div class="profile-settings">
+                    <div class="profile-settings__img">
+                      <img src="./img/profilepic.jpg" alt="" />
+                    </div>
+                    <h4>Rj S Gammad</h4>
+                  </div>
+                  <div class="profile-settings__img">
+                    <img src="./img/bluecore.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="linear"></div>
+                <div class="user-settings__account--profile">
+                  <div class="profile-settings">
+                    <p>See all profiles</p>
+                  </div>
+                  <div class="profile-settings__img">
+                    <img src="./img/bluecore.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="user-option">
+                <!-- settings -->
+              </div>
+
+              <footer class="footer">
+                <ul>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Advertising</a></li>
+                  <li><a href="#">AdChoices</a></li>
+                  <li><a href="#">Cookies</a></li>
+                  <li><a href="#">meta &copy; 2023</a></li>
+                </ul>
+              </footer>
+            </div>
+
+            <!-- transition -->
+          </div>
+        </div>
+      </nav>
+
+      <aside class="aside">
+        <div class="aside__navigation">
+          <div class="aside__navigation--icons">
+            <div class="rounded--icons">
+              <img src="./img/profilepic.jpg" alt="" />
+            </div>
+            <h4>Rj S Gammad</h4>
+          </div>
+          <div class="aside__navigation--icons">
+            <div class="rounded--icons"></div>
+            <h4>Freinds</h4>
+          </div>
+          <div class="aside__navigation--icons">
+            <div class="rounded--icons-groups"></div>
+            <h4>Groups</h4>
+          </div>
+          <div class="aside__navigation--icons">
+            <div class="rounded--icons-most--recent"></div>
+            <h4>Most Recent</h4>
+          </div>
+          <div class="aside__navigation--icons">
+            <div class="rounded--icons--marketplace"></div>
+            <h4>Marketpace</h4>
+          </div>
+          <div class="aside__navigation--icons">
+            <div class="rounded--icons--watch"></div>
+            <h4>Watch</h4>
+          </div>
+          <div class="aside__navigation--icons">
+            <div class="rounded--icons--seemore">
+              <span class="material-symbols-rounded"> expand_more </span>
+            </div>
+            <h4>See more</h4>
+          </div>
+        </div>
+
+        <div class="linear"></div>
+
+        <div class="aside__shortcuts">
+          <h4>Your shortcuts</h4>
+        </div>
+
+        <div class="aside__copyright">
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">AdChoices</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">More</a></li>
+            <li><a href="#">meta &copy; 2023</a></li>
+          </ul>
+        </div>
+      </aside>
+      <main class="main">
+        <div class="main__content">
+          <div class="story">
+            <!-- story header -->
+            <div class="story__reels">
+              <div class="story__reels-box">
+                <span class="material-symbols-rounded"> view_comfy_alt </span>
+                <h4>Stories</h4>
+              </div>
+              <div class="story__reels-box">
+                <span class="material-symbols-rounded">
+                  sync_saved_locally
+                </span>
+                <h4>Reels</h4>
+              </div>
+            </div>
+            <!-- end of  story header -->
+            <!-- start of user story -->
+            <div class="story__user">
+              <div class="story--previous">
+                <span class="material-symbols-rounded"> navigate_before </span>
+              </div>
+
+              <div class="my-story my-story-user">
+                <div class="my-story-user__img">
+                  <img src="./img/profilepic.jpg" alt="" />
+                </div>
+
+                <div class="my-story-user__add">
+                  <span class="material-symbols-rounded"> add </span>
+                </div>
+                <h4>Create story</h4>
+              </div>
+
+              <div class="story--next">
+                <span class="material-symbols-rounded"> navigate_next </span>
+              </div>
+            </div>
+            <!-- end of user story -->
+          </div>
+
+          <section class="post">
+            <div class="post__header">
+              <div class="post__header--img">
+                <img src="./img/tzuyu.jpg" alt="" />
+              </div>
+
+              <div class="post__header--input">
+                <h4>What's on your mid, Rj?</h4>
+              </div>
+            </div>
+            <div class="linear-1"></div>
+
+            <div class="post__icon">
+              <div class="post__icon--icons">
+                <div class="video-icons"></div>
+                <h4>Live video</h4>
+              </div>
+              <div class="post__icon--icons">
+                <div class="post__icon--icons">
+                  <div class="photo-icons"></div>
+                  <h4>Photo/video</h4>
+                </div>
+              </div>
+              <div class="post__icon--icons">
+                <div class="post__icon--icons">
+                  <div class="smile-icons"></div>
+                  <h4>Feeling/activity</h4>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="feed">
+            <div class="feed__post">
+              <div class="feed__post--header">
+                <div class="header-img">
+                  <img src="./img/dahyun.jpg" alt="" />
+                </div>
+
+                <div class="header-text">
+                  <h4>High Grounds Cafe</h4>
+                  <div class="header-text--privacy">
+                    <p>1h .</p>
+                    <div class="public"></div>
+                  </div>
+                </div>
+                <div class="header-option">
+                  <div class="header-option-rounded">
+                    <span class="material-symbols-rounded"> more_horiz </span>
+                  </div>
+                  <div class="header-option-rounded">
+                    <span class="material-symbols-rounded"> close </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feed__post--caption">
+                <p>
+                  Schoolbag in hand, she leaves home in the early morning Waving
+                  goodbye with an absent-minded smile I watch her go with a
+                  surge of that well-known sadness And I have to sit down for a
+                  while
+                </p>
+              </div>
+
+              <!-- photo Gallery -->
+              <div class="feed__post--img">
+                <div class="gallery-img">
+                  <img src="./img/momomyday.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/jeongyeonmyday.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/tzuyumyday.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/dahyunmyday.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/momo.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/jihyo.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/sanamyday.jpg" alt="" />
+                </div>
+              </div>
+              <!-- end photo Gallery -->
+
+              <!-- interaction like liked -->
+
+              <div class="feed__post--interaction">
+                <div class="total-like">
+                  <p>100k</p>
+                  <p>2 shares</p>
+                </div>
+              </div>
+
+              <!-- interaction like liked -->
+
+              <div class="linear-1"></div>
+
+              <div class="feed__post--action">
+                <div class="action">
+                  <div class="action--liked">
+                    <i
+                      style="
+                        background-image: url(./img/interaction.png);
+                        background-position: 0px -151px;
+                        background-size: auto;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                      "
+                      class="bg-icons"
+                    ></i>
+                  </div>
+                  <h4>Like</h4>
+                </div>
+                <div class="action">
+                  <div class="action--liked">
+                    <i
+                      style="
+                        background-image: url(./img/interaction.png);
+                        background-position: 0px -114px;
+                        background-size: auto;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                      "
+                      class="bg-icons"
+                    ></i>
+                  </div>
+                  <h4>Comment</h4>
+                </div>
+                <div class="action">
+                  <div class="action--liked">
+                    <i
+                      style="
+                        background-image: url(./img/interaction.png);
+                        background-position: 0px -479px;
+                        background-size: auto;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                      "
+                      class="bg-icons"
+                    ></i>
+                  </div>
+                  <h4>Share</h4>
+                </div>
+              </div>
+            </div>
+            <!-- reeels -->
+            <div class="feed__reels">
+              <div class="feed__reels--header">
+                <span class="material-symbols-rounded"> featured_video </span>
+                <p>Reels and shortcuts videos</p>
+              </div>
+              <div class="feed__reels--img">
+                <div class="previous">
+                  <a href="#">
+                    <span class="material-symbols-rounded">
+                      navigate_before
+                    </span>
+                  </a>
+                </div>
+
+                <div class="btn">
+                  <a href="#">
+                    <span class="material-symbols-rounded">
+                      navigate_next
+                    </span>
+                  </a>
+                </div>
+
+                <div class="featured">
+                  <img src="./img/featuredphoto.jpg" alt="" />
+                </div>
+                <div class="featured">
+                  <img src="./img/momo.jpg" alt="" />
+                </div>
+                <div class="featured">
+                  <img src="./img/nayeon.jpg" alt="" />
+                </div>
+                <div class="featured">
+                  <img src="./img/momomyday.jpg" alt="" />
+                </div>
+                <div class="featured">
+                  <img src="./img/tzuyumyday.jpg" alt="" />
+                </div>
+              </div>
+              <div class="feed__reels--interaction">
+                <h4>See more</h4>
+              </div>
+            </div>
+
+            <!-- reels -->
+
+            <div class="feed__post">
+              <div class="feed__post--header">
+                <div class="header-img">
+                  <img src="./img/dahyun.jpg" alt="" />
+                </div>
+
+                <div class="header-text">
+                  <h4>High Grounds Cafe</h4>
+                  <div class="header-text--privacy">
+                    <p>1h .</p>
+                    <div class="public"></div>
+                  </div>
+                </div>
+                <div class="header-option">
+                  <div class="header-option-rounded">
+                    <span class="material-symbols-rounded"> more_horiz </span>
+                  </div>
+                  <div class="header-option-rounded">
+                    <span class="material-symbols-rounded"> close </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feed__post--caption">
+                <p>
+                  Schoolbag in hand, she leaves home in the early morning Waving
+                  goodbye with an absent-minded smile I watch her go with a
+                  surge of that well-known sadness And I have to sit down for a
+                  while
+                </p>
+              </div>
+
+              <!-- photo Gallery -->
+              <div class="feed__post--img">
+                <div class="gallery-img">
+                  <img src="./img/momomyday.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/jeongyeonmyday.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/tzuyumyday.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/dahyunmyday.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/momo.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/jihyo.jpg" alt="" />
+                </div>
+                <div class="gallery-img">
+                  <img src="./img/sanamyday.jpg" alt="" />
+                </div>
+              </div>
+              <!-- end photo Gallery -->
+
+              <!-- interaction like liked -->
+
+              <div class="feed__post--interaction">
+                <div class="total-like">
+                  <p>100k</p>
+                  <p>2 shares</p>
+                </div>
+              </div>
+
+              <!-- interaction like liked -->
+
+              <div class="linear-1"></div>
+
+              <div class="feed__post--action">
+                <div class="action">
+                  <div class="action--liked">
+                    <i
+                      style="
+                        background-image: url(./img/interaction.png);
+                        background-position: 0px -151px;
+                        background-size: auto;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                      "
+                      class="bg-icons"
+                    ></i>
+                  </div>
+                  <h4>Like</h4>
+                </div>
+                <div class="action">
+                  <div class="action--liked">
+                    <i
+                      style="
+                        background-image: url(./img/interaction.png);
+                        background-position: 0px -114px;
+                        background-size: auto;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                      "
+                      class="bg-icons"
+                    ></i>
+                  </div>
+                  <h4>Comment</h4>
+                </div>
+                <div class="action">
+                  <div class="action--liked">
+                    <i
+                      style="
+                        background-image: url(./img/interaction.png);
+                        background-position: 0px -479px;
+                        background-size: auto;
+                        height: 1.8rem;
+                        width: 1.8rem;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                      "
+                      class="bg-icons"
+                    ></i>
+                  </div>
+                  <h4>Share</h4>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <div class="rightbar">
+        <section class="section-1">
+          <div class="pages">
+            <div class="pages__settings">
+              <header>Your Pages and profile</header>
+
+              <div class="pages__settings--rounded">
+                <span class="material-symbols-rounded"> more_horiz </span>
+              </div>
+            </div>
+            <div class="pages__icon">
+              <div class="pages__icon--rounded">
+                <img src="./img/bluecore.jpg" alt="" />
+              </div>
+              <h4>BLUE CORE internent Cafe</h4>
+            </div>
+            <div class="pages__adds">
+              <div class="pages__adds--flex">
+                <div class="rounded-page">
+                  <i
+                    style="
+                      background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/Osn9l9un-Xd.png');
+                      background-position: 0 -62px;
+                      background-size: auto;
+                      width: 20px;
+                      height: 20px;
+                      background-repeat: no-repeat;
+                      display: inline-block;
+                    "
+                    class="bg-icons"
+                  ></i>
+                </div>
+                <p>Switch into Page</p>
+              </div>
+              <div class="pages__adds--flex">
+                <div class="rounded-page">
+                  <i
+                    style="
+                      background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/Osn9l9un-Xd.png');
+                      background-position: 0 -230px;
+                      background-size: auto;
+                      width: 20px;
+                      height: 20px;
+                      background-repeat: no-repeat;
+                      display: inline-block;
+                    "
+                    class="bg-icons"
+                  ></i>
+                </div>
+                <p>Create promotion</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="linear-1"></div>
+
+          <div class="event">
+            <header>Birthdays</header>
+
+            <div class="event__type">
+              <div class="rounded-img">
+                <i
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/Osn9l9un-Xd.png');
+                    background-position: 0 0px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i>
+              </div>
+              <h4>
+                <span>Alfredo talaue</span> and <span>Arteezy Sy</span> have
+                birthdays today.
+              </h4>
+            </div>
+          </div>
+          <div class="linear-1"></div>
+
+          <div class="chat">
+            <div class="chat__icons">
+              <header>Contacts</header>
+              <div class="chat__icons--option">
+                <div class="rounded--option">
+                  <span class="material-symbols-rounded"> more_horiz </span>
+                </div>
+                <div class="rounded--option">
+                  <span class="material-symbols-rounded"> more_horiz </span>
+                </div>
+                <div class="rounded--option">
+                  <span class="material-symbols-rounded"> more_horiz </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat__group"></div>
+          </div>
+          <div class="linear-1"></div>
+
+          <div class="groupchat">
+            <header>Group conversation</header>
+
+            <div class="">
+              <div class="groupchat__group--group">
+                <div class="chat-heads">
+                  <img src="./img/sana.jpg" alt="" />
+                </div>
+                <h4>Redlie meme production:PoorBoi with d Adhd</h4>
+              </div>
+              <div class="groupchat__group--group">
+                <div class="chat-heads">
+                  <div class="group--chat">
+                    <img src="./img/dahyun.jpg" alt="" />
+                  </div>
+                  <div class="group--chat">
+                    <img src="./img/tzuyu.jpg" alt="" />
+                  </div>
+
+                  <div class="active-chat"></div>
+                </div>
+                <h4>FRIENDSHIPS 2022</h4>
+              </div>
+              <div class="groupchat__group--group">
+                <div class="chat-heads">
+                  <div class="group--chat">
+                    <img src="./img/dahyun.jpg" alt="" />
+                  </div>
+                  <div class="group--chat">
+                    <img src="./img/tzuyu.jpg" alt="" />
+                  </div>
+
+                  <div class="active-chat"></div>
+                </div>
+                <h4>Arteezy Talaue, Abeed and 2 others</h4>
+              </div>
+              <div class="groupchat__group--group">
+                <div class="chat-heads bg-chat"></div>
+                <h4>Create new group</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+  <script defer src="app.js"></script>
+</html>
