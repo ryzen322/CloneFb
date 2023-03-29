@@ -647,3 +647,14 @@ createIcons.slice(3).forEach(({ name, text, backImage, backGroundUrl }) => {
 </div>`;
   icons[1].insertAdjacentHTML("beforeend", html);
 });
+
+const feedIcon = document.querySelector(".feed-icons");
+const sideNav = document.querySelector(".aside");
+
+feedIcon.addEventListener("click", function () {
+  if (sideNav.hasAttribute("id")) {
+    sideNav.removeAttribute("id", "display: none");
+  } else {
+    sideNav.setAttribute("id", "hideSideBar");
+  }
+});

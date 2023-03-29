@@ -38,6 +38,17 @@ $bp-largest: 75em; // 1200px / 16 = 75
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px
 
+@mixin respond-tablet {
+  @media (max-width: $bp-largest) {
+    @content;
+  }
+}
+@mixin respond-tablet-landScape {
+  @media (max-width: $bp-large) {
+    @content;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -70,11 +81,25 @@ ul {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 85rem 1fr;
+  grid-template-columns: 35rem 1fr 35rem;
+
+  gap: 0.5rem;
+
+  @include respond-tablet {
+    grid-template-columns: 30rem 1fr 30rem;
+  }
+
+  @include respond-tablet-landScape() {
+    row-gap: 2rem;
+  }
+
+  // @include respond-tablet {
+  //   background-color: green;
+  // }
 }
 
 .rightbar {
-  grid-column: 4 / -1;
+  grid-column: 3 / -1;
   grid-row: 2 / 3;
   background-color: $backgroundColor;
   max-height: 100rem;
@@ -83,6 +108,10 @@ ul {
   overflow: auto;
 
   scrollbar-width: thin;
+
+  @include respond-tablet-landScape {
+    z-index: -1;
+  }
 
   &::-webkit-scrollbar {
     width: 0.75rem;
@@ -455,6 +484,14 @@ ul {
 
 #display-none {
   display: none;
+}
+
+#hideSideBar {
+  display: block;
+
+  @include respond-tablet-landScape {
+    display: none;
+  }
 }
 
 .bg-chat {
