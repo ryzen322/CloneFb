@@ -36,7 +36,8 @@ $fds-black-alpha-80: rgba(0, 0, 0, 0.8);
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px / 16 = 75
 $bp-large: 62.5em; // 1000px
-$bp-medium: 50em; // 800px
+$bp-medium: 43.75em; // 700px
+$bp-smallest: 31.25em; // 500px
 
 @mixin respond-tablet {
   @media (max-width: $bp-largest) {
@@ -45,6 +46,18 @@ $bp-medium: 50em; // 800px
 }
 @mixin respond-tablet-landScape {
   @media (max-width: $bp-large) {
+    @content;
+  }
+}
+
+@mixin respond-flipPhone {
+  @media (max-width: $bp-medium) {
+    @content;
+  }
+}
+
+@mixin repond-phone {
+  @media (max-width: $bp-smallest) {
     @content;
   }
 }
@@ -89,8 +102,12 @@ ul {
     grid-template-columns: 30rem 1fr 30rem;
   }
 
-  @include respond-tablet-landScape() {
+  @include respond-tablet-landScape {
     row-gap: 2rem;
+  }
+
+  @include repond-phone {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   // @include respond-tablet {
@@ -111,6 +128,10 @@ ul {
 
   @include respond-tablet-landScape {
     z-index: -1;
+  }
+
+  @include respond-flipPhone {
+    display: none;
   }
 
   &::-webkit-scrollbar {
