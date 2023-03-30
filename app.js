@@ -296,9 +296,9 @@ messenger.addEventListener("click", function () {
     messengerVissible.setAttribute("id", "display-none");
   }
 
-  // messengerVissible.addEventListener("click", () => {
-  //   messengerVissible.setAttribute("id", "display-none");
-  // });
+  messengerVissible.addEventListener("click", () => {
+    messengerVissible.setAttribute("id", "display-none");
+  });
 });
 
 // User settings
@@ -674,74 +674,3 @@ feedIcon.addEventListener("click", function () {
     sideNav.setAttribute("id", "hideSideBar");
   }
 });
-
-const chatheads = [];
-let sample;
-const selector = "chat-messages";
-
-const chatHeadsSelector = document.querySelectorAll(`.${selector}`);
-
-chatHeadsSelector.forEach((data, index) => {
-  data.addEventListener("click", () => {
-    const parent = data;
-    const profilePic = parent.querySelector(`.${selector}--profile`);
-    const inbox = parent.querySelector(`.${selector}--inbox`);
-    const active = parent
-      .querySelector(`.${selector}--unit`)
-      .querySelector("*");
-
-    const img = profilePic.querySelector("img").getAttribute("src");
-    const name = inbox.querySelector("h1").innerHTML;
-    // const message = inbox.querySelector("p").textContent;
-    // const time = inbox.querySelector("p").querySelector("span").textContent;
-
-    const nodes = inbox.querySelector("p").childNodes;
-
-    const [message, span] = Array.from(nodes).map((node) => {
-      return node;
-    });
-
-    const time = span.innerHTML;
-    const tpyeofChat = active.className;
-
-    const chatHeadObj = {
-      img,
-      name,
-      message,
-      time,
-      tpyeofChat,
-    };
-
-    return chatHeadObj;
-  });
-});
-
-const parentHeadSelector = document.querySelector(".chat-headsIcon");
-
-chatheads.forEach(({ name, img }) => {
-  const html = `  <div class="chat-users">
-  <div class="chat-users--text" id="display-none">
-    <h1>${name}</h1>
-    <p>Fuck you where you at</p>
-  </div>
-  <div class="chat-users--img">
-    <img src="${img}" alt="" />
-  </div>
-</div>`;
-
-  parentHeadSelector.insertAdjacentHTML("beforeend", html);
-});
-
-const hoverChatHeads = document.querySelectorAll(".chat-users--img");
-const chatElement = document.querySelectorAll(".chat-users--text");
-
-hoverChatHeads.forEach((element, index) => {
-  element.addEventListener("mouseover", () => {
-    chatElement[index].removeAttribute("id");
-  });
-  element.addEventListener("mouseout", () => {
-    chatElement[index].setAttribute("id", "display-none");
-  });
-});
-
-console.log(hoverChatHeads);
