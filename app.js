@@ -282,6 +282,10 @@ create.addEventListener("click", function () {
   } else {
     createVissible.setAttribute("id", "display-none");
   }
+
+  createVissible.addEventListener("click", () => {
+    createVissible.setAttribute("id", "display-none");
+  });
 });
 
 // user inbox
@@ -291,6 +295,10 @@ messenger.addEventListener("click", function () {
   } else {
     messengerVissible.setAttribute("id", "display-none");
   }
+
+  messengerVissible.addEventListener("click", () => {
+    messengerVissible.setAttribute("id", "display-none");
+  });
 });
 
 // User settings
@@ -300,6 +308,10 @@ user.addEventListener("click", () => {
   } else {
     userVissible.setAttribute("id", "display-none");
   }
+
+  userVissible.addEventListener("click", () => {
+    userVissible.setAttribute("id", "display-none");
+  });
 });
 
 // user Notification
@@ -309,6 +321,10 @@ addnotif.addEventListener("click", () => {
   } else {
     addnotifVissible.setAttribute("id", "display-none");
   }
+
+  addnotifVissible.addEventListener("click", () => {
+    addnotifVissible.setAttribute("id", "display-none");
+  });
 });
 
 const notificationNew = [
