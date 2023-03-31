@@ -674,3 +674,17 @@ feedIcon.addEventListener("click", function () {
     sideNav.setAttribute("id", "hideSideBar");
   }
 });
+
+const post = document.querySelector(".post__header--input");
+const showPostForm = document.querySelector(".backdrop");
+const closePostForm = document.querySelector(".close-btn");
+
+post.addEventListener("click", () => {
+  if (showPostForm.hasAttribute("id")) {
+    showPostForm.removeAttribute("id", "display-none");
+  }
+});
+
+closePostForm.addEventListener("click", () => {
+  showPostForm.setAttribute("id", "display-none");
+});
