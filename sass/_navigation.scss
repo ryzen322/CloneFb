@@ -1,7 +1,7 @@
 .navigation {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
-  height: 5.6rem;
+  height: auto;
   background-color: $navigation-background;
   position: relative;
   border-bottom: 0.25px solid #949087;
@@ -426,12 +426,8 @@
                 align-items: center;
                 justify-content: center;
 
-                & img {
-                  height: 100%;
-                  width: 100%;
-                  display: block;
-                  border-radius: inherit;
-                  object-fit: cover;
+                & i {
+                  filter: $filter-primary-icon;
                 }
               }
 

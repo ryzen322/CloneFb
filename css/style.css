@@ -505,7 +505,7 @@ ul {
 .navigation {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
-  height: 5.6rem;
+  height: auto;
   background-color: #242526;
   position: relative;
   border-bottom: 0.25px solid #949087;
@@ -803,12 +803,8 @@ ul {
                 display: flex;
                 align-items: center;
                 justify-content: center; }
-                .navigation__userinfo .icons .notification-message--chat .chat-request--img img {
-                  height: 100%;
-                  width: 100%;
-                  display: block;
-                  border-radius: inherit;
-                  object-fit: cover; }
+                .navigation__userinfo .icons .notification-message--chat .chat-request--img i {
+                  filter: invert(89%) sepia(6%) hue-rotate(185deg); }
               .navigation__userinfo .icons .notification-message--chat .chat-request--text {
                 display: flex;
                 flex-direction: column;
@@ -1526,7 +1522,7 @@ ul {
 
 .form {
   width: 80%;
-  height: 45rem;
+  height: 50rem;
   z-index: 1000;
   position: relative;
   display: flex;
@@ -1651,6 +1647,7 @@ ul {
         border-radius: 5px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 0 1rem;
         gap: 1rem; }
         .form-action--icons .select-upload h2 {
