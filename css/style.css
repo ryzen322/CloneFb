@@ -1532,6 +1532,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 31.25em) {
+    .form {
+      width: 100%; } }
   .form-action {
     width: 50rem;
     height: 42.8rem;
@@ -1539,6 +1542,9 @@ ul {
     display: flex;
     flex-direction: column;
     border-radius: 5px; }
+    @media (max-width: 31.25em) {
+      .form-action {
+        width: 40rem; } }
     .form-action--header {
       height: 6rem;
       display: flex;

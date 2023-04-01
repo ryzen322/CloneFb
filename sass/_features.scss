@@ -441,6 +441,10 @@
   align-items: center;
   justify-content: center;
 
+  @include repond-phone {
+    width: 100%;
+  }
+
   &-action {
     width: 50rem;
     height: 42.8rem;
@@ -449,6 +453,10 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
+
+    @include repond-phone {
+      width: 40rem;
+    }
 
     &--header {
       height: 6rem;
