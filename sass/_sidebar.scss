@@ -1,7 +1,7 @@
 .aside {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  height: 90rem;
+  max-height: 90rem;
   padding-top: 2.25rem;
   padding-left: 0.5rem;
   width: 100%;
@@ -40,13 +40,9 @@
 
       & .rounded--icons {
         border-radius: 50%;
-        background-image: url(../img/background-icons.png);
-        background-position: 0px -298px;
-        background-size: auto;
+
         width: 3.7rem;
         height: 3.7rem;
-        background-repeat: no-repeat;
-        display: inline-block;
 
         & img {
           width: 100%;
@@ -56,46 +52,7 @@
           border-radius: inherit;
         }
       }
-      & .rounded--icons-groups {
-        border-radius: 50%;
-        background-image: url(../img/background-icons.png);
-        background-position: 0px -75px;
-        background-size: auto;
-        width: 3.5rem;
-        height: 3.5rem;
-        background-repeat: no-repeat;
-        display: inline-block;
-      }
-      & .rounded--icons-most--recent {
-        border-radius: 50%;
-        background-image: url(../img/background-icons.png);
-        background-position: 0px -443px;
-        background-size: auto;
-        width: 3.5rem;
-        height: 3.5rem;
-        background-repeat: no-repeat;
-        display: inline-block;
-      }
-      & .rounded--icons--marketplace {
-        border-radius: 50%;
-        background-image: url(../img/background-icons.png);
-        background-position: 0px -408px;
-        background-size: auto;
-        width: 3.5rem;
-        height: 3.5rem;
-        background-repeat: no-repeat;
-        display: inline-block;
-      }
-      & .rounded--icons--watch {
-        border-radius: 50%;
-        background-image: url(../img/background-icons.png);
-        background-position: 0px -517px;
-        background-size: auto;
-        width: 3.5rem;
-        height: 3.5rem;
-        background-repeat: no-repeat;
-        display: inline-block;
-      }
+
       & .rounded--icons--seemore {
         border-radius: 50%;
         width: 3.5rem;

@@ -12,6 +12,63 @@ const shortcutsObj = [
   },
 ];
 
+const navigationOption = document.querySelector(".aside__navigation");
+
+const navigationArray = [
+  {
+    name: "Friends",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -298px",
+  },
+  {
+    name: "Groups",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -75px",
+  },
+  {
+    name: "Most Recent",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -443",
+  },
+  {
+    name: "Watch",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -517px",
+  },
+];
+
+const viewmore = document.querySelector(".profile-account");
+
+const seemore = document.querySelector(".see-more");
+
+seemore.addEventListener("click", () => {
+  navigationArray.slice(1, 2);
+
+  console.log(navigationArray);
+});
+
+navigationArray
+  .reverse()
+  .forEach(({ name, backgroundImg, backgroundImgPosition }) => {
+    const html = `<div class="aside__navigation--icons">
+  <div class="rounded--icons">
+    <i
+      style="
+        background-image: url(${backgroundImg});
+        background-position: ${backgroundImgPosition};
+        background-size: auto;
+        width: 35px;
+        height: 35px;
+        background-repeat: no-repeat;
+        display: inline-block;
+      "
+    ></i>
+  </div>
+  <h4>${name}</h4>
+</div>`;
+    viewmore.insertAdjacentHTML("afterend", html);
+  });
+
 const shortcut = document.querySelector(".aside__shortcuts");
 
 shortcutsObj.forEach((title) => {
