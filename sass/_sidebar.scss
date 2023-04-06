@@ -9,7 +9,7 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   position: relative;
   scroll-behavior: smooth;
 
@@ -23,6 +23,17 @@
 
   @include repond-phone {
     grid-column: 1 / -1;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    // background-color: $backgroundColor;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #686868;
+    border-top-right-radius: 5px;
+    border-radius: 5px;
   }
 
   &__navigation {

@@ -816,3 +816,8 @@ post.addEventListener("click", () => {
 closePostForm.addEventListener("click", () => {
   showPostForm.setAttribute("id", "display-none");
 });
+
+//
+const featuredPhoto = document.querySelector(".featured");
+
+featuredPhoto.classList.add("margin-left");

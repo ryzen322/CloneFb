@@ -245,15 +245,22 @@
     }
     &--img {
       height: 40.5rem;
-
       padding: 1rem 0.5rem;
-
       display: grid;
       grid-auto-flow: column;
       overflow-y: hidden;
       gap: 0.5rem;
       scrollbar-width: none;
+
       // scroll
+
+      @include repond-phone {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 10rem;
+        gap: 1rem;
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -262,7 +269,7 @@
       & .btn {
         height: 4rem;
         width: 4rem;
-        background-color: green;
+        background-color: #3e4042;
         border-radius: 50%;
         position: sticky;
         top: 44%;
@@ -272,11 +279,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include repond-phone {
+          display: none;
+        }
+
+        & span {
+          color: #b0b3b8;
+        }
       }
       & .previous {
         height: 4rem;
         width: 4rem;
-        background-color: green;
+        background-color: #3e4042;
         border-radius: 50%;
         position: sticky;
         top: 44%;
@@ -286,17 +301,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include repond-phone {
+          display: none;
+        }
       }
 
       & .featured {
         position: relative;
         height: 39rem;
         width: 28.2rem;
-        // background-color: #242526;
-        background-color: #ccc;
         left: -4rem;
         border-radius: 10px;
         transition: transform 500ms;
+
+        @include repond-phone {
+          flex: 0 0 60%;
+          scroll-snap-align: start;
+          cursor: pointer;
+        }
 
         & img {
           height: 100%;
