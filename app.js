@@ -40,12 +40,7 @@ const navigationArray = [
 const viewmore = document.querySelector(".profile-account");
 
 const seemore = document.querySelector(".see-more");
-
-seemore.addEventListener("click", () => {
-  navigationArray.slice(1, 2);
-
-  console.log(navigationArray);
-});
+const showless = document.querySelector(".see-less");
 
 navigationArray
   .reverse()
@@ -68,6 +63,79 @@ navigationArray
 </div>`;
     viewmore.insertAdjacentHTML("afterend", html);
   });
+
+// const watch = document.querySelector(".watch");
+
+// console.log(watch);
+
+const newData = [
+  {
+    name: "Ad Center",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -298px",
+  },
+  {
+    name: "Ads Manager",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -75px",
+  },
+  {
+    name: "Blood Donations",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -443",
+  },
+  {
+    name: "Climate Science Center",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -517px",
+  },
+];
+
+showless.addEventListener("click", () => {
+  seemore.removeAttribute("id");
+  showless.setAttribute("id", "display-none");
+  const allElement = document.querySelectorAll(".aside__navigation--icons");
+
+  const slicedElement = Array.prototype.slice.call(
+    allElement,
+    5,
+    allElement.length
+  );
+
+  slicedElement.forEach((element) => {
+    if (
+      !element.classList.contains("see-more") &&
+      !element.classList.contains("see-less")
+    ) {
+      element.remove();
+    }
+  });
+});
+
+seemore.addEventListener("click", () => {
+  showless.removeAttribute("id");
+  seemore.setAttribute("id", "display-none");
+
+  newData.forEach(({ name, backgroundImg, backgroundImgPosition }) => {
+    const html = `<div class="aside__navigation--icons">
+    <div class="rounded--icons">
+      <i
+        style="
+          background-image: url(${backgroundImg});
+          background-position: ${backgroundImgPosition};
+          background-size: auto;
+          width: 35px;
+          height: 35px;
+          background-repeat: no-repeat;
+          display: inline-block;
+        "
+      ></i>
+    </div>
+    <h4>${name}</h4>
+  </div>`;
+    seemore.insertAdjacentHTML("beforebegin", html);
+  });
+});
 
 const shortcut = document.querySelector(".aside__shortcuts");
 
