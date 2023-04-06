@@ -394,6 +394,9 @@ ul {
           display: block;
           object-fit: cover;
           border-radius: inherit; }
+        .aside__navigation--icons .rounded--icons .img-icons {
+          height: 3.3rem;
+          width: 3.3rem; }
       .aside__navigation--icons .rounded--icons--seemore {
         border-radius: 50%;
         width: 3.5rem;

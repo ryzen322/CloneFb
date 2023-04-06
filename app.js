@@ -21,14 +21,19 @@ const navigationArray = [
     backgroundImgPosition: "0px -298px",
   },
   {
+    name: "Feeds",
+    backgroundImg: "./img/background-icons.png",
+    backgroundImgPosition: "0px -298px",
+  },
+  {
     name: "Groups",
     backgroundImg: "./img/background-icons.png",
     backgroundImgPosition: "0px -75px",
   },
   {
     name: "Most Recent",
-    backgroundImg: "./img/background-icons.png",
-    backgroundImgPosition: "0px -443",
+    backgroundImg: "./img/background-icons-sidebar.png",
+    backgroundImgPosition: "0px -407px",
   },
   {
     name: "Watch",
@@ -64,30 +69,38 @@ navigationArray
     viewmore.insertAdjacentHTML("afterend", html);
   });
 
-// const watch = document.querySelector(".watch");
-
-// console.log(watch);
-
 const newData = [
   {
     name: "Ad Center",
-    backgroundImg: "./img/background-icons.png",
-    backgroundImgPosition: "0px -298px",
+    backImage: "./img/adcenter.png",
   },
   {
     name: "Ads Manager",
-    backgroundImg: "./img/background-icons.png",
-    backgroundImgPosition: "0px -75px",
-  },
-  {
-    name: "Blood Donations",
-    backgroundImg: "./img/background-icons.png",
-    backgroundImgPosition: "0px -443",
+    backImage: "./img/adsmanager.png",
   },
   {
     name: "Climate Science Center",
-    backgroundImg: "./img/background-icons.png",
-    backgroundImgPosition: "0px -517px",
+    backImage: "./img/climatescenter.png",
+  },
+  {
+    name: "Crisis Respond",
+    backImage: "./img/crisis.png",
+  },
+  {
+    name: "Suggest Edit",
+    backImage: "./img/suggestidet.png",
+  },
+  {
+    name: "Recent Activities",
+    backImage: "./img/recentactivities.png",
+  },
+  {
+    name: "Play Games",
+    backImage: "./img/playgames.png",
+  },
+  {
+    name: "Orders & Payments",
+    backImage: "./img/payments.png",
   },
 ];
 
@@ -98,7 +111,7 @@ showless.addEventListener("click", () => {
 
   const slicedElement = Array.prototype.slice.call(
     allElement,
-    5,
+    6,
     allElement.length
   );
 
@@ -116,20 +129,10 @@ seemore.addEventListener("click", () => {
   showless.removeAttribute("id");
   seemore.setAttribute("id", "display-none");
 
-  newData.forEach(({ name, backgroundImg, backgroundImgPosition }) => {
+  newData.forEach(({ name, backImage }) => {
     const html = `<div class="aside__navigation--icons">
     <div class="rounded--icons">
-      <i
-        style="
-          background-image: url(${backgroundImg});
-          background-position: ${backgroundImgPosition};
-          background-size: auto;
-          width: 35px;
-          height: 35px;
-          background-repeat: no-repeat;
-          display: inline-block;
-        "
-      ></i>
+    <img class="img-icons" src="${backImage}" alt="" />
     </div>
     <h4>${name}</h4>
   </div>`;
