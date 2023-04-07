@@ -132,7 +132,7 @@ seemore.addEventListener("click", () => {
   newData.forEach(({ name, backImage }) => {
     const html = `<div class="aside__navigation--icons">
     <div class="rounded--icons">
-    <img class="img-icons" src="${backImage}" alt="" />
+    <img class="img-icons" src="${backImage}" alt=""  loading="lazy"/>
     </div>
     <h4>${name}</h4>
   </div>`;
@@ -145,7 +145,7 @@ const shortcut = document.querySelector(".aside__shortcuts");
 shortcutsObj.forEach((title) => {
   const html = `<div class="aside__shortcuts--icons">
   <div class="shortcut--icons">
-    <img src="./img/${title.img}" alt="" />
+    <img src="./img/${title.img}" alt="" loading="lazy"/>
   </div>
   <h4>${title.title}</h4>
 </div>`;
@@ -165,10 +165,10 @@ const twiceObj = [
 twiceObj.forEach(({ name, img: imgprofile, imgBg }) => {
   const html = ` <div class="my-story">
   <div class="myday-story">
-    <img src="./img/${imgBg}" alt="" />
+    <img src="./img/${imgBg}" alt="" loading="lazy"/>
   </div>
   <div class="myday-profile">
-    <img src="./img/${imgprofile}" alt="" />
+    <img src="./img/${imgprofile}" alt="" loading="lazy"/>
   </div>
   <div class="myday-text">
     <h4>${name}</h4>
@@ -265,7 +265,7 @@ const activeUser = document.querySelector(".chat__group");
 twiceObj.forEach(({ name, img }) => {
   const html = `<div class="chat__group--group">
   <div class="chat-heads">
-    <img src="./img/${img}" alt="" />
+    <img src="./img/${img}" alt="" loading="lazy"/>
     <div class="active-chat"></div>
   </div>
   <h4>${name}</h4>
@@ -277,7 +277,7 @@ twiceObj.forEach(({ name, img }) => {
 twiceObj.forEach(({ name, img }) => {
   const html = `<div class="chat__group--group">
   <div class="chat-heads">
-    <img src="./img/${img}" alt="" />
+    <img src="./img/${img}" alt="" loading="lazy"/>
     <div class="active-chat"></div>
   </div>
   <h4>${name}</h4>
@@ -502,7 +502,7 @@ notificationNew.forEach(
 
     const html = `<div class="notification-content">
   <div class="notification-content--rounded">
-    <img src="./img/${profileImg}" alt="" />
+    <img src="./img/${profileImg}" alt="" loading="lazy"/>
     <div class="notification-content--rounded-sub">
       <i
         style="
@@ -649,7 +649,7 @@ inboxObj.forEach(
 
     const html = `<div class="chat-messages">
  <div class="chat-messages--profile">
-   <img src="${imgSender}" alt="" />
+   <img src="${imgSender}" alt="" loading="lazy"/>
  </div>
  <div class="chat-messages--inbox">
    <h1 class="header-${unreadMessage}">${messageName}</h1>
@@ -821,3 +821,74 @@ closePostForm.addEventListener("click", () => {
 const featuredPhoto = document.querySelector(".featured");
 
 featuredPhoto.classList.add("margin-left");
+
+/*
+const messageSelector = document.querySelector(".chat-messages");
+const messageArray = [];
+
+messageSelector.addEventListener("click", () => {
+  const obj = {
+    name: "arteezy",
+  };
+
+  const array = [...messageArray, obj];
+
+  const uniqueArray = array.filter((obj, index, self) => {
+    return index === self.findIndex((t) => t.name === obj.name);
+  });
+
+  console.log(uniqueArray);
+});
+*/
+
+const arrayData = [];
+
+const selectAllmessageEL = document.querySelectorAll(".chat-messages");
+
+selectAllmessageEL.forEach((e, index) => {
+  e.addEventListener("click", () => {
+    // selecting img attribute ./img/query check
+    const selectImg = e.querySelector(".chat-messages--profile");
+    const img = selectImg.querySelector("img").getAttribute("src");
+
+    // selecting name from dom example Arteezy Hunt check
+    const selectName = e.querySelector(".chat-messages--inbox");
+    const name = selectName.querySelector("h1").innerHTML;
+
+    // selecting type of message seen unread
+    const selectType = e.querySelector(".chat-messages--unit");
+    const type = selectType.querySelector("*").className;
+
+    // select message type
+    const inboxType = selectName.querySelector("p").className;
+
+    // select inbox message
+    const nodes = selectName.querySelector("p").childNodes;
+
+    const [typeofMessage, span] = Array.from(nodes).map((node) => {
+      return node;
+    });
+
+    const time = span.innerHTML;
+    const message = typeofMessage.nodeValue;
+
+    const obj = {
+      img,
+      name,
+      type,
+      message,
+      time,
+      inboxType,
+    };
+
+    arrayData.push(obj);
+
+    const array = [...arrayData];
+
+    const uniqueArray = array.filter((obj, index, self) => {
+      return index === self.findIndex((t) => t.name === obj.name);
+    });
+
+    console.log(uniqueArray);
+  });
+});
